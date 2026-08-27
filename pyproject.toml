@@ -9,7 +9,7 @@ description = "Day-ahead German electricity price forecasting and flexible-load 
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10,<3.14"
-authors = [{ name = "GridShift DE contributors" }]
+authors = [{ name = "Nikhil Balne" }]
 keywords = ["electricity", "forecasting", "germany", "smard", "dwd", "energy", "dbt"]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -59,7 +59,7 @@ gridshift = "gridshift.cli:app"
 packages = ["src/gridshift"]
 
 [tool.pytest.ini_options]
-addopts = "-q --strict-markers --disable-warnings"
+addopts = "-q --strict-markers --disable-warnings --cov-fail-under=75"
 testpaths = ["tests"]
 markers = ["slow: end-to-end integration tests"]
 

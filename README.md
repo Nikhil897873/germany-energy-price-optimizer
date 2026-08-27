@@ -2,9 +2,16 @@
 
 **Next-day German electricity price forecasting and flexible-load scheduling.**
 
+[![CI](https://github.com/Nikhil897873/germany-energy-price-optimizer/actions/workflows/ci.yml/badge.svg)](https://github.com/Nikhil897873/germany-energy-price-optimizer/actions/workflows/ci.yml)
+[![Coverage 76%](https://img.shields.io/badge/coverage-76%25-brightgreen.svg)](.github/workflows/ci.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 GridShift DE answers a commercial operating question: **when should a factory, EV fleet, or battery consume electricity to reduce cost and emissions?** It combines German power-market data from SMARD/Bundesnetzagentur with DWD weather, compares forecasting models through walk-forward backtesting, and converts the winning forecast into an auditable hourly load plan.
 
 > The repository runs without credentials. `--demo` creates clearly labeled synthetic data so reviewers can exercise the entire product before downloading multi-year source data.
+
+![GridShift DE decision dashboard](docs/assets/dashboard-overview.png)
 
 ## What is included
 
@@ -16,6 +23,18 @@ GridShift DE answers a commercial operating question: **when should a factory, E
 - 90% forecast intervals and next-day negative-price probabilities.
 - Cost, emissions, and balanced simulations that move 10–20% of demand while conserving energy and enforcing an hourly cap.
 - Interactive Streamlit dashboard, Docker image, unit/integration tests, linting, and GitHub Actions CI.
+
+## Reproducible demo results
+
+The seeded two-year synthetic demo is designed to validate the complete workflow, not to claim live-market performance. Running `gridshift run --demo --days 730` reproduces these walk-forward results across 1,344 out-of-sample hourly predictions:
+
+| Model | MAE (€/MWh) | RMSE (€/MWh) | Negative-price F1 | 90% interval coverage |
+|---|---:|---:|---:|---:|
+| **LightGBM** | **6.46** | **9.28** | **0.960** | 88.4% |
+| Ridge linear | 8.81 | 11.63 | 0.923 | 87.9% |
+| Seasonal naive | 41.10 | 55.03 | 0.474 | 89.4% |
+
+For the default balanced scenario, shifting 15% of a 240 MWh flexible-load day reduces simulated cost by **€1,633 (24.9%)** and emissions by **4,559 kg CO₂e (11.8%)**, while conserving total energy and respecting the hourly load cap.
 
 ## Quick start
 
@@ -134,3 +153,6 @@ Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Security repo
 
 Project code is MIT licensed. Source data retain their original licenses and attribution requirements.
 
+## Author
+
+Built by [Nikhil Balne](https://github.com/Nikhil897873) as an end-to-end energy analytics and machine-learning portfolio project.
