@@ -1,0 +1,10 @@
+gridshift_de:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: data/gridshift_dbt.duckdb
+      schema: analytics
+      threads: 4
+
+

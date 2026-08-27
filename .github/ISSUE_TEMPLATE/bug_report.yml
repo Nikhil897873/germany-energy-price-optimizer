@@ -1,0 +1,21 @@
+name: Bug report
+description: Report a reproducible GridShift DE problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Include the command, expected behavior, and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, installation method, and whether data mode was live or demo.
+    validations:
+      required: true
+
+

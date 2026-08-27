@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: GridShift DE
+message: If you use this software, please cite it using this metadata.
+type: software
+authors:
+  - name: GridShift DE contributors
+version: 0.1.0
+date-released: 2026-08-27
+license: MIT
+keywords:
+  - electricity forecasting
+  - flexible demand
+  - Germany
+  - SMARD
+  - DWD
+

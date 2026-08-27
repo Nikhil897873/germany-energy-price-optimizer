@@ -1,0 +1,16 @@
+.git
+.github
+.venv
+__pycache__
+.pytest_cache
+.ruff_cache
+data/bronze/*
+data/silver/*
+data/artifacts/*
+data/*.duckdb*
+dbt/target
+dbt/logs
+outputs
+work
+
+

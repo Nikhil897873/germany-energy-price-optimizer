@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_energy_hourly
+    description: Canonical hourly SMARD market, load, and generation observations in UTC.
+    columns:
+      - name: timestamp_utc
+        tests: [not_null, unique]
+      - name: renewable_share
+        tests:
+          - accepted_range:
+              arguments:
+                min_value: 0
+                max_value: 1.2
+
+  - name: stg_weather_hourly
+    description: National weather proxy aggregated from selected DWD stations.
+    columns:
+      - name: timestamp_utc
+        tests: [not_null, unique]
+
+  - name: fct_market_hourly
+    description: Analysis-ready hourly market and weather fact table.
+    columns:
+      - name: timestamp_utc
+        tests: [not_null, unique]
+
+  - name: mart_daily_market
+    description: Daily price, renewable, consumption, and carbon KPIs.
+    columns:
+      - name: market_date
+        tests: [not_null, unique]
+
+

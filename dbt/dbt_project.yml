@@ -1,0 +1,23 @@
+name: gridshift_de
+version: 1.0.0
+config-version: 2
+
+profile: gridshift_de
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+clean-targets: ["target", "dbt_packages", "logs"]
+
+models:
+  gridshift_de:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+
+vars:
+  data_dir: "data"
+
+

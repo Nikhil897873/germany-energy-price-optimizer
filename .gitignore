@@ -1,0 +1,33 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.env
+.idea/
+.vscode/
+.DS_Store
+work/
+outputs/
+
+# Runtime data and fitted artifacts
+data/bronze/**
+data/silver/**
+data/artifacts/**
+data/*.duckdb*
+!data/bronze/.gitkeep
+!data/silver/.gitkeep
+!data/artifacts/.gitkeep
+
+# dbt
+dbt/logs/
+dbt/target/
+dbt/dbt_packages/
+dbt/.user.yml
+
+# Dashboard/runtime
+.streamlit/secrets.toml
+
