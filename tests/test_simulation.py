@@ -36,4 +36,3 @@ def test_emissions_dispatch_reduces_emissions(forecast) -> None:
 def test_invalid_flexibility_is_rejected(forecast) -> None:
     with pytest.raises(ValueError, match="flexible_share"):
         simulate_flexible_load(forecast, flexible_share=0.9)
-

@@ -11,4 +11,3 @@ def test_demo_pipeline_smoke(tmp_path) -> None:
     assert result["forecast_hours"] == 24
     assert (tmp_path / "gridshift.duckdb").exists()
     assert (tmp_path / "artifacts" / "forecast_next_day.parquet").exists()
-

@@ -251,4 +251,3 @@ def _local_name(tag: str) -> str:
 def _as_utc(value: str | pd.Timestamp) -> pd.Timestamp:
     timestamp = pd.Timestamp(value)
     return timestamp.tz_localize("UTC") if timestamp.tzinfo is None else timestamp.tz_convert("UTC")
-

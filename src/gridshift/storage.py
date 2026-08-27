@@ -29,4 +29,3 @@ def read_hourly(path: Path) -> pd.DataFrame:
     frame = pd.read_parquet(path)
     frame["timestamp_utc"] = pd.to_datetime(frame["timestamp_utc"], utc=True)
     return frame.sort_values("timestamp_utc").reset_index(drop=True)
-

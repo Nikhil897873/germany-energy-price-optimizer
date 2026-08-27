@@ -13,4 +13,3 @@ select
     coalesce(cast(weather_is_forecast as boolean), false) as weather_is_forecast
 from source
 
-

@@ -30,4 +30,3 @@ Parquet artifacts make local review simple. DuckDB supplies low-ops analytical s
 
 Recommended next steps are object storage for bronze data, an orchestrator with retries/SLA monitoring, a managed analytical database, model/feature registries, scheduled rolling calibration, data-drift checks, and a constraint solver representing the actual process or battery state of charge.
 
-

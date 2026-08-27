@@ -31,4 +31,3 @@ models:
       - name: market_date
         tests: [not_null, unique]
 
-

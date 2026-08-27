@@ -48,4 +48,3 @@ def materialize_warehouse(settings: Settings) -> Path:
 
 def _sql_path(path: Path) -> str:
     return path.resolve().as_posix().replace("'", "''")
-

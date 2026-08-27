@@ -28,4 +28,3 @@ jobs:
       - name: dbt models and tests
         run: gridshift dbt-build
 
-

@@ -13,4 +13,3 @@ from {{ ref('fct_market_hourly') }}
 where not is_forecast_horizon
 group by 1
 
-

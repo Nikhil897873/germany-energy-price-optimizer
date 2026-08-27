@@ -284,4 +284,3 @@ def _calibration_predictions(
 
 def _normal_cdf(value: float) -> float:
     return 0.5 * (1 + math.erf(value / math.sqrt(2)))
-

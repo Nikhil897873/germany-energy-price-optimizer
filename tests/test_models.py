@@ -15,4 +15,3 @@ def test_walk_forward_outputs_all_comparators(tmp_path) -> None:
     assert predictions["actual_price_eur_mwh"].notna().all()
     assert (metrics["mae_eur_mwh"] >= 0).all()
     assert (metrics["interval_coverage_90"].between(0, 1)).all()
-

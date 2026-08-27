@@ -25,4 +25,3 @@ lint:
 clean:
 	python scripts/clean.py
 
-

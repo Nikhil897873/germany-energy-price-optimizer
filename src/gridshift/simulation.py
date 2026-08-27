@@ -139,4 +139,3 @@ def _robust_scale(values: np.ndarray) -> np.ndarray:
 
 def _safe_percent(numerator: float, denominator: float) -> float:
     return 100 * numerator / denominator if abs(denominator) > 1e-9 else 0.0
-

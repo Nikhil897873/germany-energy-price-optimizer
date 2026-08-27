@@ -5,4 +5,3 @@ where {{ column_name }} is not null
   and ({{ column_name }} < {{ min_value }} or {{ column_name }} > {{ max_value }})
 {% endtest %}
 
-

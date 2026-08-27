@@ -78,4 +78,3 @@ class Settings(BaseSettings):
     def ensure_directories(self) -> None:
         for path in (self.bronze_dir, self.silver_dir, self.artifacts_dir):
             path.mkdir(parents=True, exist_ok=True)
-

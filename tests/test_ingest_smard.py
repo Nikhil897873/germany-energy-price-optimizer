@@ -33,4 +33,3 @@ def test_energy_aggregates_are_bounded_and_interpretable() -> None:
     assert result.loc[0, "renewable_mwh"] == pytest.approx(50.0)
     assert result.loc[0, "renewable_share"] == pytest.approx(0.5)
     assert 0 < result.loc[0, "carbon_intensity_gco2_kwh"] < 500
-

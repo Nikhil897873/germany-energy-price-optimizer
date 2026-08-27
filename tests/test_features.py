@@ -26,4 +26,3 @@ def test_berlin_dst_hours_keep_unique_utc_keys(tmp_path) -> None:
 
     assert features["timestamp_utc"].is_unique
     assert pd.api.types.is_datetime64_any_dtype(features["timestamp_utc"])
-

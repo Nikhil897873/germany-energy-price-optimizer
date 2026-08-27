@@ -315,4 +315,3 @@ with tab_data:
         "DWD station values are averaged into a national weather proxy. Carbon intensity is an "
         "explicit generation-weighted proxy and does not account for imported electricity."
     )
-

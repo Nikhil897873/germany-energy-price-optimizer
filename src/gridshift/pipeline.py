@@ -153,4 +153,3 @@ def _model_and_simulate(
         "max_cost_savings_pct": round(float(flex_summary["cost_savings_pct"].max()), 3),
         "database": str(database_path),
     }
-

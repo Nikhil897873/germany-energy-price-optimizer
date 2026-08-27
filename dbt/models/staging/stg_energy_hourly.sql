@@ -21,4 +21,3 @@ select
     coalesce(cast(data_mode as varchar), 'live') as data_mode
 from source
 
-

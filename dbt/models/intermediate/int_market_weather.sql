@@ -11,4 +11,3 @@ from {{ ref('stg_energy_hourly') }} as energy
 left join {{ ref('stg_weather_hourly') }} as weather
     using (timestamp_utc)
 
-

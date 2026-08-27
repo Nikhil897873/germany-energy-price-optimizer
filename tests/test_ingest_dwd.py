@@ -46,4 +46,3 @@ def test_parse_mosmix_station_kmz() -> None:
     assert len(frame) == 2
     assert frame.loc[0, "temperature_c"] == pytest.approx(0.0)
     assert frame.loc[1, "wind_speed_ms"] == pytest.approx(5.0)
-

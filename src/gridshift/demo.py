@@ -179,4 +179,3 @@ def _ar_noise(rng: np.random.Generator, size: int, persistence: float) -> np.nda
         values[index] = persistence * values[index - 1] + innovations[index]
     scale = values.std() or 1.0
     return values / scale
-

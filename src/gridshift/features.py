@@ -140,4 +140,3 @@ def forecast_rows(feature_frame: pd.DataFrame, horizon: int = 24) -> pd.DataFram
     if rows[FEATURE_COLUMNS].isna().all(axis=1).any():
         raise ValueError("At least one forecast row has no usable model features")
     return rows
-

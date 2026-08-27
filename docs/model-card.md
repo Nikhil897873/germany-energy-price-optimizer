@@ -33,4 +33,3 @@ Calendar cycles; 24/48/168-hour price lags; price rolling statistics delayed by 
 
 Track data freshness/completeness, feature distributions, hourly MAE and bias, negative-event precision/recall, interval coverage, savings realized versus simulated, and forecast/model age. Retrain on a schedule and after material drift; retain the seasonal baseline as an operational fallback.
 
-

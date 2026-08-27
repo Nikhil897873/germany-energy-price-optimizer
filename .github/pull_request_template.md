@@ -8,4 +8,3 @@
 - [ ] UTC/local-time behavior was considered
 - [ ] Source attribution and schema documentation are updated
 
-

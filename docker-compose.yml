@@ -8,4 +8,3 @@ services:
     environment:
       GRIDSHIFT_DATA_DIR: /app/data
 
-

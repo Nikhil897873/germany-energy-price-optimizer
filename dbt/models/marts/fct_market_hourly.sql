@@ -27,4 +27,3 @@ select
     data_mode
 from {{ ref('int_market_weather') }}
 
-

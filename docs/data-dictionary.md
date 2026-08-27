@@ -48,4 +48,3 @@ Fuel-specific generation fields follow the same `{fuel}_mwh` convention.
 
 `flex_schedules.parquet` contains every hourly scenario, including baseline/optimized MWh, costs, emissions, load shift, and `CONSUME`/`REDUCE`/`HOLD` signal. `flex_summary.csv` contains scenario totals and percentage savings.
 
-
